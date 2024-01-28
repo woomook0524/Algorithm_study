@@ -1,0 +1,18 @@
+# My answer for https://programmers.co.kr/learn/courses/30/lessons/42891
+def solution(food_times, k):
+    n = len(food_times)
+    time = 0
+    answer = 0
+    while True:
+        for i in range(n):
+            if sum(food_times) ==0:
+                return -1
+            
+            elif time >= k and food_times[i] != 0:
+                return i+1
+                
+            elif time < k and food_times[i] != 0:
+                food_times[i] -= 1
+                time += 1
+
+    
