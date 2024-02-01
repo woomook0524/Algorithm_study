@@ -1,0 +1,23 @@
+def binary_search(array, target, start, end):
+  while start <= end:
+    mid = (start + end) // 2
+    if array[mid] == target:
+      return print(1)
+
+    elif array[mid] > target:
+      end = mid - 1
+
+    else:
+      start = mid + 1
+  return print(0)
+
+
+n = int(input())
+data = list(map(int,input().split()))
+data.sort()
+
+m = int(input())
+new = list(map(int,input().split()))
+
+for i in new:
+  binary_search(data, i, 0, len(data)-1)
