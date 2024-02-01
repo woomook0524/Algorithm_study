@@ -1,5 +1,7 @@
 # My answer for https://programmers.co.kr/learn/courses/30/lessons/42891
 # 정확성 테스트는 통과했으나, 효율성 테스트는 통과하지 못했음
+# 이렇게하면 시간 효율 O(K)라 k= 2*10^13일떄 너무 복잡
+# heapq를 사용하면  O(logK)
 
 def solution(food_times, k):
     n = len(food_times)
